@@ -1,0 +1,45 @@
+{
+	"name": "@novely/vite-plugin-novely",
+	"description": "Vite Plugin for Novely Story Language",
+	"version": "0.6.1",
+	"type": "module",
+	"sideEffects": false,
+	"types": "./dist/index.d.ts",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"dev": "tsup --watch",
+		"build": "tsup --dts"
+	},
+	"devDependencies": {
+		"tsup": "^8.3.0",
+		"typescript": "^5.6.2",
+		"vite": "^6.0.1"
+	},
+	"peerDependencies": {
+		"@novely/core": "*",
+		"vite": "^6.0.1"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/yhdgms1/novely/issues"
+	},
+	"homepage": "https://github.com/yhdgms1/novely/tree/main/packages/vite-plugin-novely",
+	"keywords": ["novely", "language", "vite", "plugin"],
+	"author": {
+		"name": "Artemiy Schukin",
+		"url": "https://github.com/yhdgms1"
+	},
+	"contributors": [],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yhdgms1/novely.git"
+	},
+	"files": ["dist/*", "types/*"],
+	"dependencies": {
+		"@novely/parser": "workspace:*"
+	}
+}

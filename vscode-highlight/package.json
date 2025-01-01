@@ -1,0 +1,32 @@
+{
+	"name": "novely-story-highlight",
+	"displayName": "Novely Story Language Highlight",
+	"description": "Highlighting for format for novel stories",
+	"version": "0.2.3",
+	"private": true,
+	"engines": {
+		"vscode": "^1.79.0"
+	},
+	"categories": ["Programming Languages"],
+	"publisher": "yhdgms1",
+	"repository": {
+		"url": "https://github.com/yhdgms1/novely/tree/main/packages/vscode-highlight"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "novely",
+				"aliases": [],
+				"extensions": [".novely"],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "novely",
+				"scopeName": "novely",
+				"path": "./syntaxes/novely.tmLanguage.json"
+			}
+		]
+	}
+}
