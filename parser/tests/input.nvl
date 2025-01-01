@@ -1,0 +1,46 @@
+start
+  !showBackground %class_background
+  !showCharacter Person emotion mini-emotion
+  !showCharacter Person "very happy"
+  !dialog
+    \Person
+    \
+      Текст
+      С переносами
+  !dialog
+    %fromJS
+    \
+      %shouldBeFromJSThisIsAError
+  !condition
+    %jsCondition
+    *
+      map_item1
+        !dialog Person text
+      map_item2
+        !dialog Person "text again"
+  !wait 100
+  !choice
+    \Choice Text
+    =
+      \Text
+      =
+        !dialog Name Content
+        !dialog Name Content
+    =
+      \Text
+      =
+        !dialog Name Content
+  !end
+dojo
+  !wait
+    400
+    500
+    600
+    700
+    800
+  !function
+    %() => $values1.state({ health: $values.state().health - 1 });
+  !function
+    %attachItem('hat')
+  !function %attachItem('hat')
+  !showCharacter %getCharacter() Happy

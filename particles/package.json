@@ -1,0 +1,56 @@
+{
+	"name": "@novely/particles",
+	"description": "Particles Action",
+	"version": "0.9.0",
+	"type": "module",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"types": "./dist/lazy.d.ts",
+			"import": "./dist/lazy.js",
+			"default": "./dist/lazy.js"
+		},
+		"./eager": {
+			"types": "./dist/eager.d.ts",
+			"import": "./dist/eager.js",
+			"default": "./dist/eager.js"
+		},
+		"./*": "./dist/*",
+		"./package.json": "./package.json"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"dev": "tsup --watch --dts",
+		"build": "tsup --dts"
+	},
+	"dependencies": {
+		"@novely/core": "workspace:*",
+		"@tsparticles/engine": "~3.7.1",
+		"@tsparticles/slim": "~3.7.1"
+	},
+	"devDependencies": {
+		"tsup": "^8.3.0",
+		"typescript": "^5.6.2"
+	},
+	"peerDependencies": {
+		"@novely/core": "*"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/yhdgms1/novely/issues"
+	},
+	"homepage": "https://github.com/yhdgms1/novely/tree/main/packages/particles",
+	"keywords": ["ts-particles", "particles", "novely"],
+	"author": {
+		"name": "Artemiy Schukin",
+		"url": "https://github.com/yhdgms1"
+	},
+	"contributors": [],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yhdgms1/novely.git"
+	},
+	"files": ["dist/*"]
+}
